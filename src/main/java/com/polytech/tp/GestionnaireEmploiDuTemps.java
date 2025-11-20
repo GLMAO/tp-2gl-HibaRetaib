@@ -39,8 +39,8 @@ public class GestionnaireEmploiDuTemps implements Subject {
     public void setChangement(String string) {
         // TODO Auto-generated method stub
         this.changement = string;
-        notifyObservers("changement dans l'emploi"+changement);
-        throw new UnsupportedOperationException("Unimplemented method 'setChangement'");
+        notifyObservers(changement);
+    
 
     }
 

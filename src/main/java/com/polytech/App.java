@@ -4,6 +4,8 @@ import com.polytech.tp.CoursBuilder;
 import com.polytech.tp.GestionnaireEmploiDuTemps;
 import com.polytech.tp.Etudiant;
 import com.polytech.tp.Responsable;
+import com.polytech.tp.ICours;  
+import com.polytech.tp.CoursEnLigne; 
 /**
  * Hello world!
  *
@@ -39,6 +41,13 @@ System.out.println(cours.getDescription());
         gestionnaire.attach(etudiant1);
         gestionnaire.attach(etudiant2);
         gestionnaire.attach(responsable);
+        
+ // EXERCICE 3: PATTERN DECORATOR (VERSION SIMPLIFIÉE)
+        System.out.println("\n=== EXERCICE 3: PATTERN DECORATOR ===");
+        
+        // Uniquement CoursEnLigne pour commencer
+        ICours coursEnLigne = new CoursEnLigne(cours);
+        System.out.println("Cours en ligne: " + coursEnLigne.getDescription());
         
         System.out.println("\n--- Test ajout de cours ---");
         gestionnaire.ajouterCours(cours);
